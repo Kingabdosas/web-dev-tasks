@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udemy Clone</title>
+    <link rel="stylesheet" href="udemyCSS.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Suisse+Works:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="promo-bar" class="promo-bar"></div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">udemy</div>
+            <div class="categories-link">Categories</div>
+        </div>
+        <div class="nav-center">
+            <div class="search-container">
+                <span>🔍</span>
+                <input type="text" placeholder="Search for anything">
+            </div>
+        </div>
+        <div class="nav-right" id="nav-links"></div>
+    </nav>
+
+    <header class="hero-section" id="hero-content"></header>
+
+    <section class="section-container">
+        <h2 class="section-title">Learn essential career and life skills</h2>
+        <p class="section-subtitle">Udemy helps you build in-demand skills fast and advance your career.</p>
+        <div class="categories-grid" id="categories-container"></div>
+    </section>
+
+    <section class="section-container">
+        <div class="dark-promo-card" id="ai-promo-container"></div>
+    </section>
+
+    <section class="section-container">
+        <h2 class="section-title">Skills to transform your career and life</h2>
+        <div class="tabs-container" id="course-tabs"></div>
+        <div class="courses-grid" id="courses-container"></div>
+    </section>
+
+    <section class="partners-section">
+        <div class="partners-text">
+            Trusted by over 17,000 companies and millions of learners around the world
+        </div>
+        <div class="partners-logos" id="partners-container"></div>
+    </section>
+
+    <script src="scriptUdemyJS.js"></script>
+</body>
+</html>
