@@ -1,20 +1,18 @@
-// --- 1. PROMO DATA ---
+// promo data
 const promoData = {
     text: "New-learner offer | Courses from E£259.99. Ends in 5h 56m 33s.",
     buttonText: "Click to redeem"
 };
 
-// --- 2. HERO DATA ---
+// hero data
 const heroData = {
     headline: "Jump into learning — for less",
     subtext: "If you're new to Udemy, we've got good news: For a limited time, courses start at just E£259.99 for new learners!",
     buttonText: "Sign up now",
-    // Online stock photo for Hero (Woman holding books)
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
 };
 
-// --- 3. PARTNERS DATA (Trusted Companies) ---
-// Array of logo URLs to mimic the Trusted Companies section
+// partners data
 const partnersData = [
     "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/600px-Volkswagen_logo_2019.svg.png",
     "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png",
@@ -26,7 +24,7 @@ const partnersData = [
     "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Ericsson_logo.svg/1200px-Ericsson_logo.svg.png"
 ];
 
-// --- 4. CATEGORIES DATA ---
+// categories data
 const categoriesData = [
     { 
         title: "Generative AI", 
@@ -45,7 +43,7 @@ const categoriesData = [
     }
 ];
 
-// --- 5. DARK PROMO DATA ---
+// dark promo data
 const aiPromoData = {
     headline: "Reimagine your career in the AI era",
     desc: "Future-proof your skills with Personal Plan. Get access to a variety of fresh content from real-world experts.",
@@ -55,7 +53,7 @@ const aiPromoData = {
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80"
 };
 
-// --- 6. COURSES DATA ---
+// course data
 const coursesData = [
     { 
         title: "The AI Engineer Course 2025: Complete Bootcamp", 
@@ -95,12 +93,12 @@ const coursesData = [
     }
 ];
 
-// --- RENDER LOGIC ---
+// render logic
 
-// 1. Render Promo
+// render Promo
 document.getElementById('promo-bar').innerHTML = `<span>${promoData.text}</span><button class="promo-btn">${promoData.buttonText}</button>`;
 
-// 2. Render Nav
+// render Nav
 const navLinks = ["Udemy Business", "Teach on Udemy"];
 const navContainer = document.getElementById('nav-links');
 navLinks.forEach(t => navContainer.innerHTML += `<a href="#" class="nav-link">${t}</a>`);
@@ -111,7 +109,7 @@ navContainer.innerHTML += `
     <a href="#" class="nav-link">🌐</a>
 `;
 
-// 3. Render Hero
+// render Hero
 document.getElementById('hero-content').innerHTML = `
     <img src="${heroData.image}" class="hero-banner-img" alt="Hero">
     <div class="hero-card">
@@ -122,14 +120,14 @@ document.getElementById('hero-content').innerHTML = `
     </div>
 `;
 
-// 4. Render Partners (Trusted Companies)
+// render Partners 
 const partnersContainer = document.getElementById('partners-container');
-partnersContainer.innerHTML = ''; // Clear defaults
+partnersContainer.innerHTML = ''; 
 partnersData.forEach(logoUrl => {
     partnersContainer.innerHTML += `<img src="${logoUrl}" alt="Partner Logo">`;
 });
 
-// 5. Render Categories
+// render Categories
 const catContainer = document.getElementById('categories-container');
 categoriesData.forEach(c => {
     catContainer.innerHTML += `
@@ -140,7 +138,7 @@ categoriesData.forEach(c => {
     `;
 });
 
-// 6. Render Dark Promo
+// render Dark Promo
 const fList = aiPromoData.features.map(f => `<li><span style="background:rgba(255,255,255,0.2); border-radius:50%; padding:2px;">➤</span> ${f}</li>`).join('');
 document.getElementById('ai-promo-container').innerHTML = `
     <div class="dark-content">
@@ -155,7 +153,7 @@ document.getElementById('ai-promo-container').innerHTML = `
     </div>
 `;
 
-// 7. Render Courses
+// render courses
 const tabContainer = document.getElementById('course-tabs');
 ["Artificial Intelligence (AI)", "Python", "Microsoft Excel", "AI Agents", "Digital Marketing"].forEach((t,i) => {
     tabContainer.innerHTML += `<div class="tab ${i===0?'active':''}">${t}</div>`;
